@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Fraunces', serif;
+    background-color: hsl(30, 38%, 92%);
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    border-radius: 10px;
+    max-width: 600px;
+    background-color: white;
+    margin: 0 1rem;
+}
+
+.image img{
+ height: 100%;
+ width: 100%;
+ object-fit: cover;
+ border-bottom-left-radius: 10px;
+ border-top-left-radius: 10px;
+
+}
+
+.details{
+    width: 90%;
+    padding: 1.75rem;
+}
+
+.details .name{
+    color: hsl(212, 21%, 14%);
+    padding-right: 2rem;
+    margin-bottom: 1.75rem;
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+}
+.text{
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 6px;
+    font-size: 14px;
+    color: hsl(228,12%,48%);
+    margin-bottom: 1.75rem;
+}
+
+.details .description{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+    line-height: 22px;
+    margin-bottom: 1.75rem;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+}
+
+.price .current{
+    color: hsl(158,36%,37%);
+}
+
+.price .old{
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(228,12%,48%);
+    text-decoration: line-through;
+}
+
+.btn{
+    width: 100%;
+    outline: 0;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 500;
+    border: 0;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: hsl(158, 36%, 25%);
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 550px){
+    .card{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        flex-direction: column;
+    }
+
+    .image{
+        width: 100%;
+        height: 40%;
+        object-fit: cover;
+    }
+
+    .image img {
+        content: url("/images/image-product-mobile.jpg");
+        border-radius: 10px 10px 0 0;
+    }
+
+    .details{
+        width:100%;
+        border-bottom-left-radius: 10px;
+        margin-bottom: 0.75rem;
+    }
+
+    .details .name{
+        margin-bottom: 0.75rem;
+        padding-right: 0;
+    }
+
+    .details .text{
+        margin-bottom: 0.75rem;
+    }
+}
